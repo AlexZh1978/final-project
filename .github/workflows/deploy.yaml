@@ -56,7 +56,7 @@ jobs:
         run: |
           docker build \
            -t ${{ secrets.DOCKER_USER }}/devops-${{ needs.detect-changes.outputs.changed_context }}:${{ github.sha }} \
-           --build-arg VITE_BACKEND_URL=https://aerbim.by/api \
+           --build-arg VITE_BACKEND_URL=http://localhost:4545/api \
            ./${{ needs.detect-changes.outputs.changed_context }}
           docker push ${{ secrets.DOCKER_USER }}/devops-${{ needs.detect-changes.outputs.changed_context }}:${{ github.sha }}
 
