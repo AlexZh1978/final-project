@@ -61,7 +61,7 @@ app.use((err, req, res, _next) => {
   });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
   console.log(`🚀 Сервер запущен на порту ${PORT}`);
   console.log(`📊 API доступен по адресу: http://0.0.0.0:${PORT}/api`);
   console.log('📊 API Version: 2.2.7.8.');
